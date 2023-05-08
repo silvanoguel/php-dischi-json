@@ -14,29 +14,43 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <!-- Axios -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- Css -->
+    <link rel="stylesheet" href="./css/style.css" />
 
 </head>
 
 <body>
 
     <div id="app">
-        <div class="container">
-            <h1 class="my-4 text-center">DISCS</h1>
 
-            <div class="row">
-                <div class="col-4 g-3" v-for="(disc,index) in discs" :key="index" >
-                    <!-- card -->
-                    <div class="card" style="width: 18rem;">
-                        <img :src="disc.poster" :alt="disc.title">
-                        <div class="card-body text-center">
-                            <p>{{ disc.title }}</p>
-                            <p>{{ disc.author}}</p>
-                            <p>{{ disc.year }}</p>
-                        </div>
-                    </div>
-                    <!-- /card -->
+        <header>
+            <div class="container">
+                <div>
+                    logo
                 </div>
             </div>
+
+        </header>
+
+        <div class="main">        
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-4 g-4" v-for="(disc,index) in discs" :key="index" >
+                        <!-- card -->
+                        <div class="card px-5 py-3"  style="width: 18rem;">
+                            <img :src="disc.poster" :alt="disc.title">
+                            <div class="card-body text-center">
+                                <p><b>{{ disc.title }}</b></p>
+                                <p>{{ disc.author}}</p>
+                                <p><b>{{ disc.year }}</b></p>
+                            </div>
+                        </div>
+                        <!-- /card -->
+                    </div>
+                </div>
+            </div>
+
 
         </div>
 
