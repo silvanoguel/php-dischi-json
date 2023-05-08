@@ -34,7 +34,7 @@
 
         <div class="main">        
 
-            <div class="container">
+            <div class="container py-3">
                 <div class="row">
                     <div class="col-4 g-4" v-for="(disc,index) in discs" :key="index" >
                         <!-- card -->
